@@ -1,10 +1,10 @@
 import { Controller, Get, Param, Body, Post, Req } from '@nestjs/common';
-import { CountryTypeDto } from './create-country.dto';
+import { Country } from '../interfaces/country.interface';
 import { CountrysService } from './country.service';
 
 interface AllCountryProps {
-  msg: CountryTypeDto
-  success: boolean
+  msg: Country
+  flag: boolean
 }
 
 @Controller('country')
@@ -20,9 +20,9 @@ export class CountryController {
 
   @Post()
   allCountry(
-    @Body() createCountryTypeDto: CountryTypeDto
+    @Body() createCountryTypeDto: Country
   ): AllCountryProps {
-    return { msg: createCountryTypeDto, success: false };
+    return { msg: createCountryTypeDto, flag: false };
   }
 
 }

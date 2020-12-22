@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { Country } from '../interfaces/country.interfece';
-
+import { Country } from '../interfaces/country.interface';
+ 
 @Injectable()
 export class CountrysService {
   private readonly countrys: Country[] = [];
@@ -9,7 +9,7 @@ export class CountrysService {
     this.countrys.push(country);
   }
 
-  findAll(): Country[] {
+  findAll(): Country[] { 
     return this.countrys;
   }
 }

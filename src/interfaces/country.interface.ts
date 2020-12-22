@@ -1,4 +1,4 @@
-export class CountryTypeDto {
+export class Country {
   name: string
   sort: number
 } 
