@@ -1,4 +1,4 @@
-export class Country {
+export class City {
   name: string
   sort: number
 } 

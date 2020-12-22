@@ -1,9 +1,16 @@
 import { Module } from '@nestjs/common';
-import { CountryModule } from './country/country.module';
-import { UsersService } from './users/users.service';
+import { CityModule } from './city/index.module';
+import { GraphQLModule } from '@nestjs/graphql';
 
 @Module({
-  imports: [CountryModule],
-  providers: [UsersService],
+  imports: [
+    GraphQLModule.forRoot({
+      typePaths: ['./**/*.graphql'],
+      installSubscriptionHandlers: true,
+    }),
+    CityModule
+  ],
+  providers: [],
 })
-export class AppModule {}
+
+export class AppModule { }
