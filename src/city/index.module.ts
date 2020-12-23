@@ -1,8 +1,11 @@
-import { Module } from '@nestjs/common';
+import { HttpModule, Module } from '@nestjs/common';
 import { CityResolver } from './index.resolver';
+import { CityService } from './index.service';
 
 @Module({
-  controllers: [],
-  providers: [CityResolver]
+  imports: [HttpModule.register({
+    baseURL: ''
+  })],
+  providers: [CityResolver, CityService]
 })
-export class CityModule {}
+export class CityModule { }
