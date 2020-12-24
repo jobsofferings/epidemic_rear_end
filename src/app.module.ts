@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
-import { CityModule } from './city/index.module';
 import { GraphQLModule } from '@nestjs/graphql';
+import { ForeignModule } from './foreign/index.module';
+import { GlobalModule } from './global/index.module';
 
 @Module({
   imports: [
@@ -8,7 +9,8 @@ import { GraphQLModule } from '@nestjs/graphql';
       typePaths: ['./**/*.graphql'],
       installSubscriptionHandlers: true,
     }),
-    CityModule
+    ForeignModule,
+    GlobalModule
   ],
   providers: [],
 })

@@ -1,0 +1,39 @@
+type Query {
+  getForeignList: GetForeignListRes
+}
+
+type GetForeignListRes {
+  list: [ForeignItem]
+}
+
+type ForeignItem {
+  name: String
+  continent: String
+  date: String
+  isUpdated: Boolean
+  confirmAdd: Int
+  confirmAddCut: Int
+  confirm: Int
+  suspect: Int
+  dead: Int
+  heal: Int
+  nowConfirm: Int
+  confirmCompare: Int
+  nowConfirmCompare: Int
+  healCompare: Int
+  deadCompare: Int
+  children: [CityItem]
+}
+
+type CityItem {
+  name: String
+  date: String
+  nameMap: String
+  isUpdated: Boolean
+  confirmAdd: Int
+  confirmAddCut: Int
+  confirm: Int
+  suspect: Int
+  dead: Int
+  heal: Int
+}
