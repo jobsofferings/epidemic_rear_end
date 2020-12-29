@@ -1,7 +1,6 @@
 import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
-import { ForeignModule } from './foreign/index.module';
-import { GlobalModule } from './global/index.module';
+import { InewsModule } from './inews/index.module';
 
 @Module({
   imports: [
@@ -9,8 +8,7 @@ import { GlobalModule } from './global/index.module';
       typePaths: ['./**/*.graphql'],
       installSubscriptionHandlers: true,
     }),
-    ForeignModule,
-    GlobalModule
+    InewsModule
   ],
   providers: [],
 })

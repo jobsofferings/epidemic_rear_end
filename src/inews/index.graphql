@@ -1,5 +1,13 @@
+scalar JSON
+
 type Query {
+  getCountryConfirmAdd: GetCountryConfirmAddRes
   getForeignList: GetForeignListRes
+  getChinaDayList: GetChinaDayListRes
+}
+
+type GetCountryConfirmAddRes {
+  data: JSON
 }
 
 type GetForeignListRes {
@@ -36,4 +44,8 @@ type CityItem {
   suspect: Int
   dead: Int
   heal: Int
+}
+
+type GetChinaDayListRes {
+  list: JSON
 }

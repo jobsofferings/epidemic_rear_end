@@ -1,9 +1,0 @@
-scalar JSON
-
-type Query {
-  getCountryConfirmAdd: GetCountryConfirmAddRes
-}
-
-type GetCountryConfirmAddRes {
-  data: JSON
-}
