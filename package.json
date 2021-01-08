@@ -25,8 +25,12 @@
   "dependencies": {
     "@nestjs/common": "^7.0.0",
     "@nestjs/core": "^7.0.0",
+    "@nestjs/mongoose": "^7.2.1",
     "@nestjs/platform-express": "^7.0.0",
+    "@typegoose/typegoose": "^7.4.6",
     "apollo-server-express": "^2.19.0",
+    "mongoose": "^5.11.10",
+    "nestjs-typegoose": "^7.1.38",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^6.5.4",
