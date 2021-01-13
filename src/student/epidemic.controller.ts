@@ -11,18 +11,18 @@ export class EpidemicController {
     return this.epidemicService.epidemicInfo();
   }
 
-  @Get('add') // 添加数据
+  @Get('add')
   add() {
-    let result = this.epidemicService.add({
+    const result = this.epidemicService.add({
       'name': '王麻子',
       'age': 20,
     })
     return result;
   }
 
-  @Get('update') // 更新数据
+  @Get('update')
   update() {
-    let result = this.epidemicService.update({
+    const result = this.epidemicService.update({
       'name': '王麻子'
     }, {
       'name': '更新后的名字'
@@ -32,7 +32,7 @@ export class EpidemicController {
 
   @Get('delete')
   delete() {
-    let result = this.epidemicService.delete({
+    const result = this.epidemicService.delete({
       'name': '更新后的名字'
     })
     return result;

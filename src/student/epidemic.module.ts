@@ -15,4 +15,5 @@ import { EpidemicSchema } from 'src/schema/epidemic.schema';
   controllers: [EpidemicController],
   providers: [EpidemicService]
 })
+
 export class EpidemicModule {}

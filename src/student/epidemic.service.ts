@@ -18,12 +18,20 @@ export class EpidemicService {
     return await model.save();
   }
 
-  async update(json1: Epidemic, json2: Epidemic) {
+  async updateOne(json1: Epidemic, json2: Epidemic) {
     return await this.epidemicModel.updateOne(json1, json2);
   }
 
-  async delete(json: Epidemic) {
+  async update(json1: Epidemic, json2: Epidemic) {
+    return await this.epidemicModel.updateMany(json1, json2);
+  }
+
+  async deleteOne(json: Epidemic) {
     return await this.epidemicModel.deleteOne(json);
+  }
+
+  async delete(json: Epidemic) {
+    return await this.epidemicModel.deleteMany(json);
   }
 
 }
