@@ -3,11 +3,12 @@ import { InjectModel } from '@nestjs/mongoose';
 
 @Injectable()
 export class ForeignService {
+
     constructor(
         @InjectModel('Foreign') private readonly foreignModel
     ) { }
 
     async foreignInfo() {
-        return await this.foreignModel.find({});
+        return await this.foreignModel.find().exec();
     }
 }

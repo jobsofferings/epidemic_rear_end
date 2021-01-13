@@ -7,7 +7,7 @@ import { ForeignController } from './foreign.controller';
 @Module({
   imports: [MongooseModule.forFeature([
     {
-      name: 'Foreign', // 需要个schema名称对应
+      name: 'Foreign', // 需要个schema名称对应, 建议大写开头
       schema: ForeignSchema, // 引入的schema
       collection: 'epidemic' // 数据库名称
     }

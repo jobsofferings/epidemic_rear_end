@@ -13,6 +13,8 @@ import { ForeignModule } from './student/foreign.module';
     MongooseModule.forRoot('mongodb://134.175.103.75:27017/admin', {
       useNewUrlParser: true,
       useUnifiedTopology: true,
+    	useCreateIndex: true,
+    	useFindAndModify: true,
       authSource: "admin",
       auth: {
         user: '2821740092',
