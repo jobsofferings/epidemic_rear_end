@@ -4,10 +4,11 @@ import { ForeignService } from './foreign.service';
 @Controller('foreign')
 export class ForeignController {
 
-    constructor(private readonly foreignService: ForeignService) { }
+  constructor(private readonly foreignService: ForeignService) { }
 
-    @Get()
-    index() {
-        return this.foreignService.foreignInfo();
-    }
+  @Get()
+  async index() {
+    const res = await this.foreignService.foreignInfo();
+    return { res };
+  }
 }
