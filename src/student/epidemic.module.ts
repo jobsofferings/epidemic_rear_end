@@ -3,6 +3,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { EpidemicService } from './epidemic.service';
 import { EpidemicController } from './epidemic.controller';
 import { EpidemicSchema } from 'src/schema/epidemic.schema';
+import { ScheduleService } from 'src/schedule/schedule.service';
 
 @Module({
   imports: [MongooseModule.forFeature([
@@ -13,7 +14,7 @@ import { EpidemicSchema } from 'src/schema/epidemic.schema';
     },
   ])],
   controllers: [EpidemicController],
-  providers: [EpidemicService]
+  providers: [EpidemicService, ScheduleService]
 })
 
 export class EpidemicModule {}
